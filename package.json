@@ -97,5 +97,13 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.72.1",
     "vitest": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadshah49/sociurl.git"
+  },
+  "homepage": "https://github.com/ahmadshah49/sociurl#readme",
+  "bugs": {
+    "url": "https://github.com/ahmadshah49/sociurl/issues"
   }
 }

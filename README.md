@@ -1,4 +1,4 @@
-# Sociurl
+ Sociurl
 
 **Detect, validate, parse, normalize and display social media profile URLs.**
 
@@ -858,5 +858,3 @@ Platform definitions should remain data-driven and custom registrations must sta
 ## License
 
 MIT © 2026 Sociurl contributors. See [LICENSE](./LICENSE).
-#   s o c i u r l  
- 
