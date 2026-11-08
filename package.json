@@ -1,6 +1,6 @@
 {
   "name": "sociurl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect, validate, parse, normalize and display social media profile URLs, with optional React components.",
   "keywords": [
     "social",
