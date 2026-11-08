@@ -1,0 +1,50 @@
+import type { PlatformDefinition } from "../types";
+import { icon } from "./icon";
+
+export const x: PlatformDefinition = {
+  id: "x",
+  name: "X (Twitter)",
+  domains: ["x.com", "twitter.com"],
+  allowedSubdomains: ["www", "m", "mobile"],
+  canonicalDomain: "x.com",
+  profilePatterns: [
+    {
+      handle: "plain",
+      username: {
+        pattern: /^[A-Za-z0-9_]{1,15}$/,
+        minLength: 1,
+        maxLength: 15,
+        description: "Letters, numbers and underscores.",
+      },
+      description: "Root profile path: /username",
+    },
+  ],
+  reservedPaths: [
+    "about",
+    "account",
+    "compose",
+    "download",
+    "explore",
+    "hashtag",
+    "help",
+    "home",
+    "i",
+    "intent",
+    "jobs",
+    "login",
+    "logout",
+    "messages",
+    "notifications",
+    "privacy",
+    "search",
+    "settings",
+    "share",
+    "signup",
+    "terms",
+    "tos",
+    "twitter",
+    "who_to_follow",
+    "x",
+  ],
+  icon: icon("x", "#000000"),
+};
