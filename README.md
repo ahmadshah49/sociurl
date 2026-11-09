@@ -1,4 +1,4 @@
- Sociurl
+Sociurl
 
 **Detect, validate, parse, normalize and display social media profile URLs.**
 
