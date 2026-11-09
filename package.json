@@ -102,7 +102,7 @@
     "type": "git",
     "url": "https://github.com/ahmadshah49/sociurl.git"
   },
-  "homepage": "https://github.com/ahmadshah49/sociurl#readme",
+  "homepage": "https://sociurl-docs.vercel.app/",
   "bugs": {
     "url": "https://github.com/ahmadshah49/sociurl/issues"
   }

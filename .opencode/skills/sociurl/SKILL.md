@@ -8,6 +8,8 @@ description: Add, install, configure, or troubleshoot the sociurl package. Cover
 `sociurl` detects, validates, extracts, normalizes and displays social media
 profile URLs. It is framework-independent, with an optional React entrypoint.
 
+**Docs and live examples:** https://sociurl-docs.vercel.app/
+
 | Entry                  | Contents                    |
 | ---------------------- | --------------------------- |
 | `sociurl`              | Core API, no React required |
@@ -544,6 +546,7 @@ const links = text
 | Key           | Value                                              |
 | ------------- | -------------------------------------------------- |
 | Name          | `sociurl`                                          |
+| Docs          | https://sociurl-docs.vercel.app/                   |
 | License       | MIT                                                |
 | Node          | `>=18`                                             |
 | Module type   | `"type": "module"`, dual ESM/CJS                   |

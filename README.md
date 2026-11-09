@@ -1,6 +1,8 @@
-Sociurl
+# Sociurl
 
 **Detect, validate, parse, normalize and display social media profile URLs.**
+
+**Documentation and live examples:** <https://sociurl-docs.vercel.app/>
 
 Sociurl is a TypeScript-first library with a framework-independent core and an optional React integration. It understands platform-specific profile URL structures instead of applying one generic URL check to every network.
 
@@ -43,6 +45,7 @@ validateSocialUrl("https://linkedin.com/in/");
 - Scoped custom platform registration.
 - Zero runtime dependencies in the core.
 - Optional React components and hooks with React kept external.
+- Bundled SVG icons with monochrome `currentColor` and opt-in brand colors.
 - ESM, CommonJS, TypeScript declarations and source maps.
 - Tree-shakeable (`sideEffects: false`).
 
@@ -61,6 +64,8 @@ npm install react react-dom
 ```
 
 React 18 and React 19 are supported. React and React DOM are optional peer dependencies; the core entry point never imports them.
+
+**Documentation:** <https://sociurl-docs.vercel.app/> · **Live playground:** <https://sociurl-docs.vercel.app/playground>
 
 ---
 
@@ -531,13 +536,22 @@ The component ships no CSS. Every rendered part accepts both a class name and an
 
 Additional display props:
 
-| Prop          | Description                                   |
-| ------------- | --------------------------------------------- |
-| `showIcon`    | Toggle the platform icon. Defaults to `true`. |
-| `showError`   | Toggle the error element. Defaults to `true`. |
-| `iconSize`    | Icon width/height. Defaults to `20`.          |
-| `renderError` | Replace the error content entirely.           |
-| `messages`    | Override validation messages per error code.  |
+| Prop          | Description                                                     |
+| ------------- | --------------------------------------------------------------- |
+| `showIcon`    | Toggle the platform icon. Defaults to `true`.                   |
+| `showError`   | Toggle the error element. Defaults to `true`.                   |
+| `colorStyle`  | `"default"` (monochrome) or `"brand"`. Defaults to `"default"`. |
+| `iconColor`   | Per-icon color override; beats `colorStyle`.                    |
+| `iconSize`    | Icon width/height. Defaults to `20`.                            |
+| `renderError` | Replace the error content entirely.                             |
+| `messages`    | Override validation messages per error code.                    |
+
+Example — brand icon on, error hidden, icon removable:
+
+```tsx
+<SocialInput platform="instagram" colorStyle="brand" showIcon showError={false} />
+<SocialInput platform="instagram" showIcon={false} />
+```
 
 The wrapper also exposes `data-platform` and `data-valid="true" | "false"`, so you can style purely from CSS:
 
@@ -840,6 +854,8 @@ npm run test:coverage
 The bundled icon path data is sourced from [Simple Icons](https://simpleicons.org/) (CC0 1.0). The LinkedIn path is sourced from Simple Icons v13 because LinkedIn was removed from later Simple Icons releases. See `src/platforms/icon-data.ts` for the source note.
 
 All product names, logos, brand names and trademarks are the property of their respective owners. Icons are included for platform identification only and do not imply endorsement or affiliation. If you use these marks in a commercial product, review the relevant brand guidelines and replace icons if necessary. Platform names are used descriptively.
+
+Brand colors are stored per platform as `icon.color` and are only applied when you opt in with `colorStyle="brand"`. They follow the official color listed by each platform at the time of release. Brand colors can change; verify against current guidelines before relying on them for brand-critical UI.
 
 ---
 
